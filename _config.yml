@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
+title: 吨博
+subtitle: 'Blog'
+description: '生命不息，创作不止'
 keywords:
-author: John Doe
-language: en
+author: 吨博
+language: zh-CN
 timezone: ''
 
 # URL
@@ -94,7 +94,6 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 ## theme: landscape
-## theme: yilia
 theme: butterfly
 
 # Deployment
@@ -103,3 +102,4 @@ deploy:
   type: 'git'
   repo: https://github.com/Rookiedwb/Rookiedwb.github.io.git
   branch: master
+##search
