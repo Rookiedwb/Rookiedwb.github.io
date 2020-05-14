@@ -1,0 +1,11 @@
+class:
+  class_name: 友情链接
+  link_list:
+    1:
+      name: rookiedwb
+      link: https://github.com/Rookiedwb
+      descr: github
+    2:
+      name: 吨博
+      link: https://Rookiedwb.github.io
+      descr: 个人博客

@@ -5,15 +5,12 @@
 # xxx || icon:
 #   xxx || 連結 || icon
 menu:
-  Home: / || fa fa-home
-  Archives: /archives/ || fa fa-archive
-  Tags: /tags/ || fa fa-tags
-  Categories: /categories/ || fa fa-folder-open
-  Link: /link/ || fa fa-link
-  About: /about/ || fa fa-heart
-  List||fa fa-list:
-    - Music || /music/ || fa fa-music
-    - Movie || /movies/ || fa fa-film
+  首页: / || fa fa-home
+  时间轴: /archives/ || fa fa-archive
+  标签: /tags/ || fa fa-tags
+  分类: /categories/ || fa fa-folder-open
+  友链: /link/ || fa fa-link
+  留言板: /messageboard/ || fa fa-link
 
 # PWA
 # See https://github.com/JLHwung/hexo-offline
@@ -48,9 +45,9 @@ copy:
 #   icon: link || the description
 # ---------------
 social:
-  fa fa-github: https://github.com/jerryc127 || Github
-  fa fa-envelope: mailto:xxxxxxx@gmail.com || Email
-  fa fa-rss: /atom.xml || RSS
+  fa fa-github: https://github.com/Rookiedwb || Github
+  fa fa-envelope: mailto:2469394969@qqm.com || Email
+#  fa fa-rss: /atom.xml || RSS
 
 ####    search    ####
 # Algolia search
@@ -522,7 +519,7 @@ subtitle:
   # (如果有英文逗號' , '，請使用轉義字符 &#44;)
   # 如果關閉打字效果，subtitle只會顯示sub的第一行文字
   sub:
-    - 今日事&#44;今日畢
+    - 苦难总是接踵而至，这才是世间的常理。
     - Never put off till tomorrow what you can do today
 
 # fontawesome圖標
@@ -545,7 +542,7 @@ aside:
     description:
   card_announcement:
     enable: true
-    content: This is my Blog
+    content: 感谢访问本站，若喜欢欢迎收藏 ^_^
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
@@ -767,3 +764,19 @@ CDN:
 
   # 簡繁轉換
   translate: /js/tw_cn.js
+  
+  social:
+  fa fa-github: https://github.com/Fzyproj
+  fa fa-rss: /atom.xml
+  css:
+    - https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css
+    - https://use.fontawesome.com/releases/v5.8.1/css/all.css
+  
+        
+Flink:
+  headline: 友情链接
+  info_headline: 我的Blog资料
+  name: Blog 名字： 吨博
+  address: Blog 地址：https://rookiedwb.github.io/
+  info: Blog 简介： 苦难总是接踵而至，这才是世间的常理。
+  comment: 如果需要交换友链,请留言
