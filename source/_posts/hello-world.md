@@ -2,7 +2,7 @@
 ---
 title: 测试一下啊啊啊
 date: 2017-05-26 12:12:57
-categories: 
+categories:
 - web前端
 tags:
 - jQuery
@@ -40,8 +40,14 @@ More info: [Generating](https://hexo.io/docs/generating.html)
 
 ### Deploy to remote sites
 
-``` bash
+``` java
 $ hexo deploy
 ```
 
 More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+``` java
+	public static void main (String[]org) {
+		System.out.println("hello world")；
+		return;
+	}
+```

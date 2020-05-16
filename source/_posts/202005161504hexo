@@ -1,0 +1,97 @@
+---
+---
+title: 创建hexo博客（免费！！！）
+date: 2020-05-16 13:58:00
+categories:
+- 其他
+tags:
+- hexo
+- blog
+---
+---
+使用hexo框架生成静态个人博客，并且可用通过github或者gitee将该博客发布到网络上。
+应用该方法生成的博客完全免费，是不是很优秀？
+新手可以通过这个熟悉个人博客搭建，为以后的个人博客建立做准备。
+
+## hexo本地安装
+
+### 1、hexo介绍
+
+主页： [hexo中文官方网址](https://hexo.io/zh-cn/)
+
+hexo的官网上面有这个很详细的介绍，这个有兴趣的可以自己去看看官方的主页。这里说一下hexok
+的特点
+  - hexo 可以理解为是基于node.js制作的一个博客工具，不是我们理解的一个开源的博客系统。其中的差别，有点意思。
+  - hexo 正常来说，不需要部署到我们的服务器上，我们的服务器上保存的，其实是基于在hexot通过markdown编写的文章，然后hexo帮我们生成静态的html页面，然后，将生成的html上传到我们的服务器。简而言之：hexo是个静态页面生成、上传的工具。
+
+### 2、hexo安装
+首先，你的电脑必须要安装**node.js** 。因为，hexok是基于node.js创建的一个博客工具。
+
+下载地址： [node.js](https://nodejs.org/zh-cn/)
+
+进入该网站后，下载node.js。安装即可，安装后会有node本身和npm包管理器
+
+然后通过cmd命令窗口或git bash 窗口执行命令
+``` bash
+npm -v
+node -v
+```
+如果安装成功，就可以分别看到npm和node的版本信息了。
+
+然后安装hexo
+因为，npm是国外的网址，在国内可能访问比较慢。可以用国内的淘宝镜像来代替。
+``` bash
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+```
+然后，通过cnpm替换npm来执行命令。
+
+但是在我对cnpm的感官不是特别的好，因为我因为cnpm导致了前端的一些bug。所以，如果能用npm建议使用npm。npm安装不上在改为使用cnpm
+
+下面开始安装hexo，执行如下命令：
+``` bash
+npm install -g hexo-cli
+```
+然后使用hexo -v来验证一下。
+
+然后找个一个合适的位置创建一个文件夹，进入这个文件夹，然后，初始化hexo
+``` bash
+sudo hexo init
+```
+初始化的时间可能比较长，耐心等待一会就可以了。如果提示：Start to blogging with hexo;就表示安装完成了。
+
+然后执行命令： hexo s 。这样本地的hexo就启动成功；通过网址： http://localhost:4000就可以访问了。
+### 3、创建自己的第一篇博客
+执行创建博客命令；
+``` bash
+hexo new "创建的该篇博客的标题"
+```
+然后进入到 source/_posts/就可以看到自己刚刚创建的博客和之前hexo初始化自带的hello world博客，编辑对应的文件，就可以写入博客内容。
+在hexo生成的目录下执行命令：
+``` bash
+hexo clean
+hexo g
+hexo s
+```
+就可以将新写博客内容放网址上面。
+
+hexo博客内容是根据**Markdown**语法生成的,如果不会的话可以到[菜鸟教程|Markdown教程](https://www.runoob.com/markdown/md-tutorial.html)上面查看语法规则。
+
+Markdown编译器可以在网上找，个人推荐：typore和atom。
+###4、hexo部署github
+首先，登录github并创建一个仓库。这个仓库的名字一定要和你的GitHub昵称一致。否则在访问后不能正常渲染出页面。
+
+然后安装git部署插件
+```
+npm install --save hexo-deployer-git
+```
+在hexo的根目录下，找到一个文件：**_config.yml**
+在文件中找到deploy这一项，修改为：
+``` xml
+deploy:
+  type: git
+  repo: https://github.com/xxxxx/xxxx.github.io.git
+  branch: master
+```
+一定要注意符号必须是英文的而且 “:” 后面要有一个空格，地址一定要正确。
+
+保存后执行： hexo d ；将hexo生成的内容提交到github上面。在github的仓库上面就可以看到提交的文件， 在浏览器中输入 ：https://****.github.io就可以访问那你自己的博客了。
