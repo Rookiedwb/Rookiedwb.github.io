@@ -45,9 +45,18 @@ $ hexo deploy
 ```
 
 More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+<<<<<<< HEAD
 ``` java
 	public static void main (String[]org) {
 		System.out.println("hello world")；
 		return;
 	}
 ```
+=======
+
+``` java
+public static void main (String [] org){
+	System.out.println("Hello world");
+}
+```
+>>>>>>> 74bb0ce188a4a9ecb4fa956d984be88f5b2014df
