@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>关于java下载文件设置响应头</title>
-    <url>/2019/04/10/2019-04-10%E9%9A%8F%E7%AC%94%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<hr>
-<p>记录一次关于java后台向前台提供下载文件时，响应头部需要的设置。防止<strong>锟斤拷</strong></p>
-<p>具体设置如下：（以后在整理吧，先记录下来）</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">download</span><span class="params">(HttpServletResponse res, Entity entity)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="keyword">null</span> == entity) &#123;</span><br><span class="line">			entity = <span class="keyword">new</span> Entity();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// .创建文件名</span></span><br><span class="line">		String fileName = <span class="string">"xxx.xxx"</span>;</span><br><span class="line">		<span class="comment">// 返回文件相应头设置</span></span><br><span class="line">		res.setHeader(<span class="string">"Content-Disposition"</span>, <span class="string">"attachment;filename*=UTF-8''"</span> + URLEncoder.encode(fileName, <span class="string">"UTF-8"</span>));</span><br><span class="line">		res.setHeader(<span class="string">"Content-Type"</span>, <span class="string">"multipart/form-data"</span>);</span><br><span class="line">		OutputStream os = res.getOutputStream();</span><br><span class="line">		service.download(entity).write(os);</span><br><span class="line">		os.flush();</span><br><span class="line">		os.close();</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>个人小笔记</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>文件下载</tag>
-        <tag>编码设置</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>关于POI4.0样式设置</title>
     <url>/2019/04/15/2019-04-15%E9%9A%8F%E7%AC%94%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<hr>
@@ -32,6 +15,23 @@
         <tag>java</tag>
         <tag>POI4.0</tag>
         <tag>样式设置</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于java下载文件设置响应头</title>
+    <url>/2019/04/10/2019-04-10%E9%9A%8F%E7%AC%94%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<hr>
+<p>记录一次关于java后台向前台提供下载文件时，响应头部需要的设置。防止<strong>锟斤拷</strong></p>
+<p>具体设置如下：（以后在整理吧，先记录下来）</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">download</span><span class="params">(HttpServletResponse res, Entity entity)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="keyword">null</span> == entity) &#123;</span><br><span class="line">			entity = <span class="keyword">new</span> Entity();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// .创建文件名</span></span><br><span class="line">		String fileName = <span class="string">"xxx.xxx"</span>;</span><br><span class="line">		<span class="comment">// 返回文件相应头设置</span></span><br><span class="line">		res.setHeader(<span class="string">"Content-Disposition"</span>, <span class="string">"attachment;filename*=UTF-8''"</span> + URLEncoder.encode(fileName, <span class="string">"UTF-8"</span>));</span><br><span class="line">		res.setHeader(<span class="string">"Content-Type"</span>, <span class="string">"multipart/form-data"</span>);</span><br><span class="line">		OutputStream os = res.getOutputStream();</span><br><span class="line">		service.download(entity).write(os);</span><br><span class="line">		os.flush();</span><br><span class="line">		os.close();</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>个人小笔记</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>文件下载</tag>
+        <tag>编码设置</tag>
       </tags>
   </entry>
   <entry>
